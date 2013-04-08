@@ -27,4 +27,8 @@ pick the number associated with aokp_tenderloin-userdebug
 
 make bootimage
 
+mkimage -A ARM -O Linux -T RAMDisk -C none -n "CM-.. tenderloin Ramdisk" -d /home/***pathto***/aokp/out/target/product/tenderloin/ramdisk.img /home/***pathto***/aokp/out/target/product/tenderloin/ramdisk.ub
+
+mkimage -A arm -O linux -T multi -C none -n "CM-..  tenderloin Multiboot" -d /home/***pathto***/android/aokp/out/target/product/tenderloin/kernel:/home/***pathto***/aokp/out/target/product/tenderloin/ramdisk.ub /home/***pathto***/aokp/out/target/product/tenderloin/boot.img
+
 make -4 otapackage
